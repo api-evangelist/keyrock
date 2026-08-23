@@ -1,0 +1,41 @@
+generated: '2026-08-23'
+method: probed
+source: https://keyrock.com/.well-known/
+note: >-
+  Every /.well-known/ path probed on keyrock.com returned a genuine HTTP 404 served by the site's
+  own WordPress 404 template (96,683 bytes). A deliberate control probe of a nonsense path
+  (/.well-known/nonexistent-control-probe-xyz) returned the same 404, so this host is NOT a
+  catch-all soft-200 — the absences below are real. No WellKnown or SecurityTxt pointer is emitted
+  in apis.yml, because nothing was served. Keyrock publishes no API host, so there is no second
+  host to probe: api./docs./developer./portal.keyrock.com all resolve to the same Cloudflare
+  wildcard and answer the same interstitial as the apex.
+hit_count: 0
+hosts:
+- host: https://keyrock.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  soft_404_control:
+    path: /.well-known/nonexistent-control-probe-xyz
+    status: 404
+    bytes: 96683
+    verdict: honest-404

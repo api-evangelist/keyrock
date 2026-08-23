@@ -1,0 +1,90 @@
+generated: '2026-08-23'
+method: searched
+source: https://keyrock.com/keyrock-secures-mica-license/
+note: >-
+  Keyrock publishes no machine-readable contract, so nothing here is derived from a spec — every
+  entry below is a compliance/regulatory claim the company published on its own site or announced
+  in a press release, and each is recorded with the page that states it. No technical or domain
+  API standard (FIX, FIXatdl, ISO 20022, OpenAPI, AsyncAPI, OAuth2, OpenID Connect) could be
+  asserted, because Keyrock exposes no public interface to assert it against; the domain-standard
+  slot is left empty rather than filled speculatively. The keyrock.com origin sits behind a
+  Cloudflare interstitial that answers HTTP 403 to every non-browser request including a control
+  probe of a nonexistent path, so the pages below are evidenced by their presence in search-engine
+  indexes and by corroborating trade press rather than by a body we could read directly.
+conformance:
+- id: mica
+  name: Markets in Crypto-Assets Regulation (EU 2023/1114)
+  conforms: true
+  evidence:
+    claim: >-
+      Keyrock announced in June 2026 that it secured a MiCA licence through its French entity
+      Keyrock FR SAS, enabling cross-border operation across EU member states under a single
+      regulatory framework.
+    url: https://keyrock.com/keyrock-secures-mica-license/
+    http_status: 403
+    status_note: Cloudflare bot interstitial; page is indexed and titled "Keyrock Secures MiCA License - Keyrock".
+    corroboration:
+    - https://thepaypers.com/crypto-web3-and-cbdc/news/keyrock-secures-mica-licence-to-expand-across-europe
+    entity: Keyrock FR SAS
+  method: searched
+- id: soc2-type-ii
+  name: SOC 2 Type II
+  conforms: true
+  evidence:
+    claim: >-
+      Keyrock published an announcement that it achieved SOC 2 Type II compliance and states it
+      renews the attestation annually.
+    url: https://keyrock.com/keyrock-achieves-soc-2-type-ll-compliance/
+    http_status: 403
+    status_note: Cloudflare bot interstitial; page is indexed and titled "Keyrock achieves SOC 2 Type ll Compliance - Keyrock".
+    corroboration:
+    - https://trust.keyrock.com/
+    corroboration_note: Keyrock's SafeBase trust center independently lists "SOC 2 Type 2".
+  method: searched
+- id: dora
+  name: Digital Operational Resilience Act (EU 2022/2554)
+  conforms: true
+  evidence:
+    claim: >-
+      Keyrock's SafeBase trust center lists DORA alongside SOC 2 Type 2 in its certifications and
+      compliance section.
+    url: https://trust.keyrock.com/
+    http_status: 403
+    status_note: Cloudflare interstitial to curl; body read via browser-class fetch, contents confirmed.
+  method: searched
+- id: iso-27001
+  name: ISO/IEC 27001
+  conforms: false
+  evidence:
+    claim: No ISO 27001 certification was found published by Keyrock. Recorded as an honest negative, not a failure.
+  method: searched
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence:
+    claim: >-
+      Not applicable — Keyrock publishes no API and no authorization surface.
+      /.well-known/oauth-authorization-server and /.well-known/openid-configuration both return 404.
+    url: https://keyrock.com/.well-known/oauth-authorization-server
+    http_status: 404
+  method: probed
+- id: rfc9116
+  name: RFC 9116 security.txt
+  conforms: false
+  evidence:
+    claim: No security.txt is served.
+    url: https://keyrock.com/.well-known/security.txt
+    http_status: 404
+  method: probed
+domain_standard:
+  market: digital-asset market making / institutional crypto trading
+  candidates_considered:
+  - FIX / FIXatdl (the standard order-entry protocol in this market)
+  - ISO 20022 (settlement messaging)
+  - Pyth Network price-feed publisher schema
+  declared: none
+  note: >-
+    Keyrock is a Pyth Network data publisher, which means it speaks Pyth's publisher interface —
+    but that is Pyth's contract, published by Pyth, not a standard Keyrock declares in a contract
+    of its own. REWARD-ONLY check: nothing is asserted here, because Keyrock ships no contract in
+    which a domain standard could be declared.

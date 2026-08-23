@@ -1,0 +1,77 @@
+generated: '2026-08-23'
+method: searched
+source: https://registry.npmjs.org/ (npm scope @keyrock) + https://github.com/KeyrockEU
+note: >-
+  Keyrock publishes no client SDK, because it publishes no API. The npm scope @keyrock is genuinely
+  first-party — every package resolves to a repository under github.com/KeyrockEU — but all three
+  are internal Node.js observability utilities (winston logging transports and a SignalFX metrics
+  collector) rather than client libraries for a Keyrock service. They are recorded here as real
+  first-party publications with their real currency; NO `SDKs` pointer is wired into apis.yml,
+  because treating a 2018 winston transport as an API SDK would credit Keyrock with a client
+  library surface it does not have. All three last published in August 2018 and none has shipped a
+  release in the eight years since. Registries checked with no first-party Keyrock result: PyPI
+  (`keyrock` 404; `django-keyrock` exists but is a FIWARE Keyrock Identity Manager client — a
+  different, unrelated project), crates.io (0 results), Maven Central, NuGet, pkg.go.dev,
+  RubyGems, Packagist. The npm scope @keyrock-dev is a DIFFERENT publisher
+  (gitlab.com/charles.olson) and is not Keyrock.
+package_count: 3
+sdk_count: 0
+packages:
+- language: javascript
+  registry: npm
+  name: "@keyrock/winston-bugsnag-transport"
+  url: https://www.npmjs.com/package/@keyrock/winston-bugsnag-transport
+  install: npm install @keyrock/winston-bugsnag-transport
+  version: 0.0.0
+  published: '2018-08-03'
+  license: MIT
+  repository: https://github.com/KeyrockEU/bugsnag-transport
+  official: true
+  kind: internal-tooling
+  note: Bugsnag transport for winston ^3.0.0. Not a client library for any Keyrock API.
+- language: javascript
+  registry: npm
+  name: "@keyrock/winston-logdna-transport"
+  url: https://www.npmjs.com/package/@keyrock/winston-logdna-transport
+  install: npm install @keyrock/winston-logdna-transport
+  version: 0.0.1
+  published: '2018-08-03'
+  license: MIT
+  repository: https://github.com/KeyrockEU/logdna-transport
+  official: true
+  kind: internal-tooling
+  note: Unofficial LogDNA transport for winston ^3.0.0. Not a client library for any Keyrock API.
+- language: javascript
+  registry: npm
+  name: "@keyrock/signalfx-collector"
+  url: https://www.npmjs.com/package/@keyrock/signalfx-collector
+  install: npm install @keyrock/signalfx-collector
+  version: 0.1.0
+  published: '2018-08-09'
+  license: MIT
+  repository: https://github.com/KeyrockEU/signalfx-collector
+  official: true
+  kind: internal-tooling
+  note: Periodic metrics collector for SignalFX. Not a client library for any Keyrock API.
+source_code:
+  github_org: https://github.com/KeyrockEU
+  public_repos: 22
+  first_party_originals:
+  - name: keyrock-starter-kit
+    url: https://github.com/KeyrockEU/keyrock-starter-kit
+    updated: '2018-08-24'
+  - name: signalfx-collector
+    url: https://github.com/KeyrockEU/signalfx-collector
+    updated: '2018-08-09'
+  - name: bugsnag-transport
+    url: https://github.com/KeyrockEU/bugsnag-transport
+    updated: '2018-08-03'
+  - name: logdna-transport
+    url: https://github.com/KeyrockEU/logdna-transport
+    updated: '2018-08-03'
+  note: >-
+    The remaining 18 public repos are forks of upstream projects Keyrock consumes (aptos-core,
+    aptos-rust-sdk, wasmtime, pyo3, pythonize, foundry, xrpl_sdk_rust, dlmm-sdk, heapless,
+    pyth-agent, rusoto, pulsar, meteor-launchpad, pg-extend-rs and others), plus validator-hub
+    which is a fork of vechain/validator-hub used to submit Keyrock's own Stargate validator
+    metadata. None of them is a Keyrock API client.

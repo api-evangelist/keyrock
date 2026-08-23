@@ -1,17 +1,37 @@
 aid: keyrock
-name: KeyRock
-description: 'KeyRock is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Keyrock
+description: >-
+  Keyrock is a digital asset market maker and liquidity provider founded in Brussels in 2017 and
+  now operating as a global crypto investment group. It runs in-house algorithmic and
+  high-frequency trading infrastructure to supply market making, over-the-counter (OTC) trading,
+  an options desk, onchain/DEX liquidity, validator services, ecosystem development and a Smart
+  Beta fund to token issuers, exchanges, brokerages and institutional counterparties across 85+
+  centralised and decentralised venues. Keyrock also publishes proprietary crypto, FX, commodity
+  and US equity pricing into the Pyth Network oracle. Its commercial surface is bilateral rather
+  than self-serve: engagements are contracted, and clients receive execution analytics and PnL
+  attribution through a credentialed dashboard. As of this profiling round Keyrock publishes no
+  public developer portal, API reference or machine-readable contract of any kind. The group holds
+  a MiCA licence through its French entity Keyrock FR SAS and has publicly announced SOC 2 Type II
+  compliance.
+image: https://avatars.githubusercontent.com/u/41155949?v=4
 url: https://raw.githubusercontent.com/api-evangelist/keyrock/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-harvest-source-url: https://forgeglobal.com/keyrock_stock/
 specificationVersion: '0.20'
 created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Company
+- Market Making
+- Liquidity
+- Digital Assets
+- Cryptocurrency
+- Trading
+- OTC
+- Options
+- Market Data
+- Financial Services
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,59 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/keyrock-trust-center.yml
+- type: DomainSecurity
+  url: security/keyrock-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/keyrock_stock/
+  url: https://keyrock.com/
+- type: About
+  url: https://keyrock.com/about-us/
+- type: Blog
+  url: https://keyrock.com/knowledge-hub/
+- type: Support
+  url: https://keyrock.com/contact/
+- type: TermsOfService
+  url: https://keyrock.com/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://keyrock.com/privacy-complaints-notice/
+- type: GitHubOrganization
+  url: https://github.com/KeyrockEU
+- type: LinkedIn
+  url: https://www.linkedin.com/company/keyrock
+- type: LLMsTxt
+  url: llms/keyrock-llms.txt
+- type: Packages
+  url: packages/keyrock-packages.yml
+- type: Conformance
+  url: conformance/keyrock-conformance.yml
+- type: Compliance
+  url: conformance/keyrock-conformance.yml
+- type: Plans
+  url: plans/keyrock-plans-pricing.yml
+x-enrichment:
+  date: '2026-08-23'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Keyrock's own Yoast-generated llms.txt (HTTP 200) enumerates every public page on keyrock.com
+    — five services, the FAQ, knowledge hub, testimonials, legal and about — and contains no
+    developer, API, documentation or sign-up entry; the firm sells market making, OTC, options and
+    onchain liquidity under bilateral contracts and reports to clients through a credentialed
+    dashboard, so there is no public contract to harvest.
+  evidence:
+  - url: https://keyrock.com/llms.txt
+    status: 200
+  - url: https://keyrock.com/.well-known/api-catalog
+    status: 404
+  - url: https://keyrock.com/openapi.json
+    status: 403
+  - url: https://keyrock.com/.well-known/agent-card.json
+    status: 404
+  - url: https://trust.keyrock.com/
+    status: 403
+  checked: '2026-08-23'

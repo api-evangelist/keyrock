@@ -1,0 +1,21 @@
+generated: '2026-08-23'
+method: searched
+source: https://keyrock.com/
+note: >-
+  Keyrock publishes no pricing page, no plan tiers and no self-serve sign-up. Its own
+  Yoast-generated llms.txt (HTTP 200) enumerates every public page on keyrock.com — five services,
+  five FAQ entries, the knowledge hub, testimonials, legal and the about page — and contains no
+  pricing, plans, sign-up or billing entry. Engagements in market making, OTC, options, onchain
+  liquidity, validator services and the Smart Beta fund are contracted bilaterally with qualified
+  counterparties through the contact form. This is a measured zero, not an unchecked field.
+plan_count: 0
+pricing_model: contact-sales
+self_serve_signup: false
+plans: []
+evidence:
+- url: https://keyrock.com/llms.txt
+  status: 200
+  finding: Provider's own page index lists no pricing, plans or sign-up page.
+- url: https://keyrock.com/contact/
+  status: 403
+  finding: Contact form is the stated route to engagement; blocked to our crawler by a Cloudflare interstitial.

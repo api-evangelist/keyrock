@@ -1,0 +1,57 @@
+generated: '2026-08-23'
+method: searched
+probe: true
+source: https://trust.keyrock.com/
+url: https://trust.keyrock.com/
+platform: SafeBase
+host_evidence:
+  dns: trust.keyrock.com CNAME keyrock.portals.safebase.io
+  note: >-
+    The subdomain is a SafeBase-provisioned tenant portal named for Keyrock, which is why this is
+    recorded as a real trust center rather than a speculative subdomain guess. A direct curl to
+    both trust.keyrock.com and keyrock.portals.safebase.io returns an HTTP 403 Cloudflare
+    interstitial; the portal contents below were read through a browser-class fetch that the edge
+    admitted. This is the ONLY Keyrock-controlled surface this pass was able to read end to end —
+    every keyrock.com HTML path, including a nonexistent control path, answers the same 403.
+certifications:
+- name: SOC 2 Type 2
+  status: listed
+- name: DORA
+  full_name: Digital Operational Resilience Act (EU 2022/2554)
+  status: listed
+documents_listed:
+  policies:
+  - Acceptable Use Policy
+  - Access Control Policy
+  - AI System Development and Evaluation Policy
+  - Anti-Malicious Software Policy
+  - Asset Management Policy
+  - Audit and Accountability Policy
+  - Data Classification Policy
+  - Information Security Policy
+  - Password Policy
+  - Physical Security Policy
+  - Software Development Lifecycle Policy
+  corporate_security:
+  - Asset Management Practices
+  - Email Protection
+  - Employee Handbook
+  access: >-
+    Documents are listed publicly; retrieval is behind an "Ask for information" request form, the
+    standard SafeBase gated-document pattern.
+vulnerability_disclosure:
+  listed: false
+  note: >-
+    The trust center names no security contact, no disclosure policy and no bug bounty, and
+    keyrock.com serves no /.well-known/security.txt (404). No `Security` pointer is wired into
+    apis.yml, because there is nothing published to point at.
+evidence:
+- source: https://trust.keyrock.com/
+  http_status: 403
+  http_status_note: Cloudflare interstitial to curl; body read via browser-class fetch.
+  keywords:
+  - soc 2 type 2
+  - dora
+  - trust center
+- source: dns:CNAME trust.keyrock.com
+  value: keyrock.portals.safebase.io
