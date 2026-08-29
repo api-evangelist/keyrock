@@ -13,6 +13,17 @@ description: >-
   public developer portal, API reference or machine-readable contract of any kind. The group holds
   a MiCA licence through its French entity Keyrock FR SAS and has publicly announced SOC 2 Type II
   compliance.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://avatars.githubusercontent.com/u/41155949?v=4
 url: https://raw.githubusercontent.com/api-evangelist/keyrock/refs/heads/main/apis.yml
 x-type: company
