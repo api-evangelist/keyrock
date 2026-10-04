@@ -55,7 +55,7 @@ tags:
 - OTC
 - Options
 - Market Data
-- Financial-Services
+- Financial Services
 tags_raw:
 - Company
 - Market Making
@@ -67,6 +67,7 @@ tags_raw:
 - Options
 - Market Data
 - Financial Services
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
