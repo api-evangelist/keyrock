@@ -2,8 +2,22 @@
   "repo": "keyrock",
   "feeds": [
     {
-      "source": "https://keyrock.com/about-us/",
-      "feed_url": "https://keyrock.com/about-us/feed/",
+      "source": "https://keyrock.com/blog/",
+      "feed_url": "https://keyrock.com/blog/feed/",
+      "title": "",
+      "saved": 2,
+      "method": "discovered"
+    },
+    {
+      "source": "https://keyrock.com/blog/feed/",
+      "feed_url": "https://keyrock.com/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://keyrock.com/knowledge-hub/",
+      "feed_url": "https://keyrock.com/knowledge-hub/feed/",
       "title": "",
       "saved": 0,
       "method": "discovered"
@@ -16,6 +30,6 @@
       "method": "feed"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-10-03T12:30:02Z"
+  "post_count": 2,
+  "fetched": "2026-10-10T13:15:00Z"
 }
